@@ -176,7 +176,7 @@ const MenuPizzas = {
                     <h4>${pizza.name}</h4>
                     <b>$${pizza.price}</b>
                 </div>
-                <p id=pizza${index} onclick=Aside.addToOrder(event)>Adicionar item</p>
+                <p id=pizza${index} onclick=Aside.addToOrder(event)>Add item</p>
                 `
             this.main.appendChild(cardElement)
         })
