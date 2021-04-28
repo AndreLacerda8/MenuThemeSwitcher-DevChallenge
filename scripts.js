@@ -184,6 +184,3 @@ const MenuPizzas = {
 }
 
 window.onload = MenuPizzas.addPizzasDom()
-
-
-// Fazer funcionalidade de excluir item
