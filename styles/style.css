@@ -1,0 +1,104 @@
+html[menu-theme="light"]{
+    --bg-primary:#FFFFFF;
+    --bg-secondary: #F2F2F2;
+    --text-primary: #32324F;
+    --text-secondary: rgba(0, 0, 0, 0.5);
+    --color-primary: #EB5757;
+    --color-secondary: rgba(0, 0, 0, 0.0625);
+}
+
+html[menu-theme="dark"]{
+    --bg-primary:#252A3C;
+    --bg-secondary: #1B1F2C;
+    --text-primary: #FFFFFF;
+    --text-secondary: rgba(255, 255, 255, 0.5);
+    --color-primary: #EB5757;
+    --color-secondary: #2F364C;
+}
+
+@media(max-width: 1200px){
+    html{
+        font-size: 93.75%; /*isso equivale a 15px*/
+    }
+}
+
+@media(max-width: 728px){
+    html{
+        font-size: 87.5%; /*isso equivale a 14px*/
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: var(--bg-secondary);
+    overflow-y: hidden;
+}
+
+
+@media(max-width: 800px){
+    aside{
+        left: 100%;
+    }
+    body > header, body > main, body > #page-footer{
+        width: 100%;
+    }
+
+    header .options{
+        display: flex;
+        align-items: center;
+    }
+    header .open-aside{
+        display: block;
+        margin-right: 1rem;
+        margin-left: 0.5rem;
+        cursor: pointer;
+        width: 0.5rem;
+    }
+    .open{
+        left: 0;
+        width: 100%;
+        animation-duration: 0.5s;
+        animation-name: openAside;
+    }
+    .close{
+        width: 100%;
+        animation-duration: 0.5s;
+        animation-name: closeAside;
+    }
+
+    aside header div{
+        display: flex;
+        align-items: center;
+    }
+
+    aside header div > img{
+        display: block;
+        transform: rotateY(180deg);
+        margin-right: 1.25rem;
+        cursor: pointer;
+    }
+}
+
+@keyframes openAside{
+    from{
+        left: 100%;
+    }
+    to{
+        left: 0;
+    }
+}
+
+@keyframes closeAside{
+    from{
+        left: 0;
+    }
+    to{
+        left: 100%;
+    }
+}

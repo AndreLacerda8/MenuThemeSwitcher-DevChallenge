@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR" menu-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/aside.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+</head>
+<body>
+    <header>
+        <h2>Pizza</h2>
+
+        <div class="options">
+            <div class="checkbox" onclick="DarkMode.checkFunction()">
+                <span class="ball"></span>
+                <div class="icon"></div>
+            </div>
+    
+            <div class="open-aside" onclick="Aside.openAside()">
+                <img src="images/arrow.png" alt="">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="card return">
+            <div>
+                <span>Voltar</span>
+                <img src="images/return.png" alt="Voltar">
+                <span>a</span>
+            </div>
+        </div>
+    </main>
+
+    <aside>
+        <header>
+            <div onclick="Aside.closeAside()">
+                <img src="images/arrow.png" alt="">
+                <h3>Mr Blackmore</h3>
+            </div>
+            <div class="options-aside">
+                <button onclick="Aside.optionsAside()">∙∙∙</button>
+                <button id="delete-all" onclick="Aside.deleteAllItems()">Excluir todos os itens</button>
+            </div>
+        </header>
+
+        <ul>
+
+        </ul>
+
+        <footer>
+            <div>
+                <div class="discount">
+                    <p>Discount</p>
+                    <img src="images/discount.png" alt="Adicionar desconto">
+                </div>
+
+                <div class="total-value">
+                    <p>Total</p>
+                    <b>$0.<span>00</span></b>
+                </div>
+            </div>
+
+            <button>
+                <strong>PAY</strong>
+                <b>$0.<span>00</span></b>
+            </button>
+        </footer>
+    </aside>
+
+    <footer id="page-footer">
+        <a href="#">All categories</a>
+        <a href="#" class="selected-category">Italian Food</a>
+        <a href="#">Coffe</a>
+        <a href="#">Breakfast</a>
+    </footer>
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>

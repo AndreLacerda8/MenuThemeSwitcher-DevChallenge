@@ -1,0 +1,39 @@
+#page-footer{
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 25rem);
+    height: 5.625rem;
+    background-color: var(--bg-primary);
+
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+}
+
+#page-footer a{
+    padding: 2rem 2rem;
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    white-space: nowrap;
+
+}
+
+#page-footer .selected-category{
+    color: var(--text-primary);
+    border-top: 2px solid var(--color-primary);
+}
+
+@media(max-width: 1080px){
+    #page-footer{
+        width: calc(100% - 20rem);
+    }
+}
+
+@media(max-width: 900px){
+    #page-footer{
+        width: calc(100% - 15rem);
+    }
+}

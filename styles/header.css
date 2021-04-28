@@ -1,0 +1,66 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 25rem);
+}
+
+header h2{
+    font: 1.5rem;
+    margin: 1rem 1.25rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+header .checkbox{
+    margin: 1rem;
+    width: 3.75rem;
+    height: 1.75rem;
+    border-radius: 140px;
+    background-color: var(--bg-primary);
+    position: relative;
+    cursor: pointer;
+}
+
+header .checkbox .ball{
+    position: absolute;
+    top: 0.125rem;
+    left: 0.125rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.75rem;
+    transition: transform 0.3s;
+    z-index: 11;
+    background-color: var(--color-primary);
+}
+
+header .checkbox .icon{
+    background-image: url(../images/light.png);
+    background-position: center;
+    position: absolute;
+    top: 0.3rem;
+    right: 0.3rem;
+    width: 1.15rem;
+    height: 1.15rem;
+}
+
+html[menu-theme="dark"] header .checkbox .icon{
+    background-image: url(../images/dark.png);
+    left: 0.3rem;
+}
+
+.open-aside{
+    display: none;
+}
+
+@media(max-width: 1080px){
+    header{
+        width: calc(100% - 20rem);
+    }
+}
+
+@media(max-width: 900px){
+    header{
+        width: calc(100% - 15rem);
+    }
+}
