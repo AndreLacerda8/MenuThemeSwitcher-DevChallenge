@@ -41,24 +41,21 @@ aside header .options-aside button:first-child{
 aside header .options-aside #delete-all{
     position: fixed;
     top: 2.5rem;
-    right: -11rem;
+    right: 0rem;
+    transform: translateX(8rem);
+
     background-color: var(--bg-secondary);
     color: var(--text-primary);
     padding: 0.3rem;
     cursor: pointer;
     border: none;
 
-    animation-name: close-options-aside;
-    animation-duration: 0.5s;
-
-    transition: filter 0.2s;
+    transition: 0.4s;
     opacity: 0;
 }
 
 aside header .options-aside #delete-all.selected{
-    animation-name: open-options-aside;
-    animation-duration: 0.5s;
-    right: 1.3rem;
+    transform: translateX(-1.3rem);
     opacity: 1;
 }
 
@@ -237,25 +234,5 @@ aside footer button b span{
     }
     aside li b{
         font-size: 1.4rem;
-    }
-}
-
-@keyframes open-options-aside{
-    from{
-        right: -11rem;
-    }
-    to{
-        right: 1.3rem;
-    }
-}
-
-@keyframes close-options-aside{
-    from{
-        right: 1.3rem;
-        opacity: 1;
-    }
-    to{
-        right: -11rem;
-        opacity: 0;
     }
 }
